@@ -55,3 +55,64 @@ variable "ssh_location" {
   description = "Authorised IP to ssh into the servers"
   type        = string
 }
+
+# rds variables
+variable "database_snapshot_identfier" {
+  description = "database snapshot name"
+  type        = string
+}
+
+variable "database_instance_class" {
+  description = "database instance type"
+  type        = string
+}
+
+variable "database_instance_identifier" {
+  description = "database instance identifier"
+  type        = string
+}
+
+# Boolen means the value we can enter for this value is either true or false
+variable "multi_az_deployment" {
+  description = "create a standydb instance"
+  type        = bool
+}
+
+# acm variables
+variable "domain_name" {
+  description = "domain name"
+  type        = string
+}
+
+variable "alternative_names" {
+  description = "sub domain name"
+  type        = string
+}
+
+# s3 variables
+variable "env_file_bucket_name" {
+  description = "s3 bucket name"
+  type        = string
+}
+
+variable "env_file_name" {
+  description = "env file name"
+  type        = string
+}
+
+# ecs variables
+variable "architecture" {
+  description = "ecs cpu archietecture"
+  type        = string
+}
+
+variable "container_image" {
+  description = "container image uri"
+  type        = string
+}
+
+# route53 variables
+variable "record_name" {
+  description = "sub domain name"
+  type        = string
+}
